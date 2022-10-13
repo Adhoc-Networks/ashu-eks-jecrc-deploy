@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: ashu-cisco-app
+  name: ashu-cisco-app
+  namespace: ashu-space
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: ashu-cisco-app
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: ashu-cisco-app
+    spec:
+      containers:
+      - image: dockerashu/ashuciscoapp:v0011
+        name: ashuciscoapp
+        ports:
+        - containerPort: 80
+        resources: {}
+status: {}
