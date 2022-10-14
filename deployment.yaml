@@ -1,25 +1,25 @@
-apiVersion: apps/v1
-kind: Deployment
+apiVersion: apps/v1 # control plane api version 
+kind: Deployment # type of resources -- pod/service/ingress/deployment
 metadata:
   creationTimestamp: null
   labels:
-    app: ashu-cisco-app
-  name: ashu-cisco-app
-  namespace: ashu-space
+    app: ashu-app
+  name: ashu-app # name of deployment 
+  namespace: ashu-space # namespace info 
 spec:
-  replicas: 2
+  replicas: 2 # by default one replicas
   selector:
     matchLabels:
-      app: ashu-cisco-app
+      app: ashu-app
   strategy: {}
   template:
     metadata:
       creationTimestamp: null
       labels:
-        app: ashu-cisco-app
+        app: ashu-app
     spec:
       containers:
-      - image: dockerashu/ashuciscoapp:v0011
+      - image: docker.io/dockerashu/ashuciscoapp:v0011
         name: ashuciscoapp
         ports:
         - containerPort: 80
