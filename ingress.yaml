@@ -2,7 +2,6 @@ apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: ashu-app-route # name of routing rule 
-  namespace: ashu-space  # namespace info 
   annotations:
     nginx.ingress.kubernetes.io/rewrite-target: /
 spec:
