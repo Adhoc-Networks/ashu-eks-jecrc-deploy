@@ -5,7 +5,6 @@ metadata:
   labels:
     app: ashu-app
   name: ashu-internal-lb
-  namespace: ashu-space
 spec:
   ports:
   - port: 80
