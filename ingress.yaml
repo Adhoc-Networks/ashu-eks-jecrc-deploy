@@ -8,7 +8,7 @@ metadata:
 spec:
   ingressClassName: nginx # ingress className 
   rules:
-  - host: me.ashutoshh.in # domain website name 
+  - host: jecrc.ashutoshh.in # domain website name 
     http:
       paths:
       - path: /  # home page 
