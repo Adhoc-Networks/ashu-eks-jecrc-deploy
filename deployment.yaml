@@ -5,9 +5,8 @@ metadata:
   labels:
     app: ashu-app
   name: ashu-app # name of deployment 
-  namespace: ashu-space # namespace info 
 spec:
-  replicas: 2 # by default one replicas
+  replicas: 3 # by default one replicas
   selector:
     matchLabels:
       app: ashu-app
